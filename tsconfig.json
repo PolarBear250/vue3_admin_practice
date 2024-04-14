@@ -3,13 +3,14 @@
   //编译器选项，决定了怎么对ts文件进行编译
   "compilerOptions": {
     "baseUrl": "./", // 解析非相对模块的基地址，默认是当前目录
-    "paths": { //路径映射，相对于baseUrl
-      "@/*": ["src/*"] 
+    "paths": {
+      //路径映射，相对于baseUrl
+      "@/*": ["src/*"]
     },
     "target": "ES2020", //设置ts代码编译的目标版本
     "useDefineForClassFields": true,
     "module": "ESNext", //设置编译后代码使用的模块化系统
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],//指定代码运行时所包含的库
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], //指定代码运行时所包含的库
     "skipLibCheck": true,
 
     /* Bundler mode */
@@ -17,7 +18,7 @@
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,//不生成编译后的文件
+    "noEmit": true, //不生成编译后的文件
     "jsx": "preserve",
 
     /* Linting */
@@ -25,11 +26,10 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "types": ["element-plus/global"],//Element Plus全局组件类型声明
+    "types": ["element-plus/global"] //Element Plus全局组件类型声明
   },
   //"include"用来指定哪些ts文件需要被编译 **表示任意目录，*表示任意文件名
   //"exclude"不需要被编译的文件目录 默认值：["node_modules", "bower_components", "jspm_packages"]
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }], 
-  
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -15,7 +15,7 @@ request.interceptors.request.use(
     // Do something before request is sent
     //config配置对象，headers属性请求头，经常给服务器端携带公共参数
     config.headers.token = '123'
-    console.log(config)
+    // console.log(config)
     return config
   },
   function (error) {
@@ -28,7 +28,7 @@ request.interceptors.request.use(
 request.interceptors.response.use(
   function (response) {
     //简化数据
-    // console.log(response.data)
+    //注意登录失败是没有返回一个Error的，是被当做了正常返回一个reponse(一般来说应该是Error的)
     return response.data
     // return response
   },

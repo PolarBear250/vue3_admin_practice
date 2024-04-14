@@ -1,11 +1,15 @@
 //登录接口需要携带参数ts类型
 export interface loginFormData {
   username: string
-  password: number
+  password: string
+}
+interface dataType {
+  token?: string
+  message?: string
 }
 export interface loginResponseData {
   code: number
-  data: { token: string }
+  data: dataType
 }
 
 interface user {
